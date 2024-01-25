@@ -1,0 +1,40 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: var(--primary-font);
+	font-weight: 500;
+	font-variant-numeric: lining-nums;
+	font-feature-settings: 'lnum';
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	color: #202020;
+}
+
+input {
+	font-feature-settings: 'lnum';
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	cursor: pointer;
+
+	&:hover {
+		color: inherit;
+	}
+}

@@ -1,0 +1,119 @@
+@import './ReactToastify.module.scss';
+@import './loading.module.scss';
+
+.Toastify__toast {
+	position: relative;
+	min-height: 45px;
+	overflow: initial;
+	font-size: 14px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	backdrop-filter: blur(10px);
+	background: url(/images/bg-tooltip.png) no-repeat;
+	background-position: center center;
+	background-size: auto;
+
+	&-container {
+		padding: 0;
+		z-index: 2147483648;
+	}
+
+	&-body {
+		padding: 0 30px;
+		text-align: center;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 11px;
+		left: 11px;
+		width: 20px;
+		height: 20px;
+		background: url(/svg/success.svg) no-repeat;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		right: 11px;
+		width: 10px;
+		height: 10px;
+		background: url(/svg/close.svg) no-repeat;
+		background-size: cover;
+	}
+
+	&--warning {
+		color: #ff9a3e;
+
+		&::after {
+			width: 22px;
+			height: 22px;
+			background: url(/svg/warn.svg) no-repeat;
+			background-size: cover;
+		}
+	}
+	&--error {
+		color: #ff6974;
+
+		&::after {
+			width: 23px;
+			height: 23px;
+			background: url(/svg/error.svg) no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&--success {
+		color: #3bea95;
+
+		&::after {
+			background: url(/svg/success.svg) no-repeat;
+			background-size: cover;
+		}
+	}
+}
+
+.Toastify__close-button {
+	display: none;
+}
+
+.Toastify__toast-body {
+	a {
+		color: #000;
+	}
+}
+
+.hub-loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 9999999;
+}
+
+.hub-loading::after {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	content: '';
+	width: 100px;
+	height: 100px;
+	background: url('/../../images/loading.gif') no-repeat;
+	background-size: 100%;
+}
+
+.modal {
+	#modal-detect {
+		&.modal-dialog {
+			max-width: 600px;
+		}
+	}
+}
